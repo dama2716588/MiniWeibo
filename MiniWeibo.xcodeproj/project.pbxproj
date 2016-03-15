@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		784B11361C96C09900C06E2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11351C96C09900C06E2A /* main.m */; };
+		784B11391C96C09900C06E2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11381C96C09900C06E2A /* AppDelegate.m */; };
+		784B113B1C96C09900C06E2A /* MiniWeibo-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 784B113A1C96C09900C06E2A /* MiniWeibo-Prefix.pch */; };
+		784B113D1C96C09900C06E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784B113C1C96C09900C06E2A /* Assets.xcassets */; };
+		784B114B1C96C09900C06E2A /* MiniWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B114A1C96C09900C06E2A /* MiniWeiboTests.m */; };
+		784B11561C96C09900C06E2A /* MiniWeiboUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11551C96C09900C06E2A /* MiniWeiboUITests.m */; };
+		784B116D1C96C0A800C06E2A /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B116C1C96C0A800C06E2A /* InterfaceController.m */; };
+		784B11701C96C0A800C06E2A /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B116F1C96C0A800C06E2A /* NotificationController.m */; };
+		784B11731C96C0A800C06E2A /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11721C96C0A800C06E2A /* GlanceController.m */; };
+		784B11751C96C0A800C06E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784B11741C96C0A800C06E2A /* Assets.xcassets */; };
+		784B117A1C96C0A800C06E2A /* MiniWeibo WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 784B11791C96C0A800C06E2A /* MiniWeibo WatchKit 1 App.app */; };
+		784B11801C96C0A800C06E2A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784B117E1C96C0A800C06E2A /* Interface.storyboard */; };
+		784B11821C96C0A800C06E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784B11811C96C0A800C06E2A /* Assets.xcassets */; };
+		784B11861C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 784B11671C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		784B11921C96D40200C06E2A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11911C96D40200C06E2A /* IndexViewController.m */; };
+		784B11A11C97F87000C06E2A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11971C97F87000C06E2A /* FMDatabase.m */; };
+		784B11A21C97F87000C06E2A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11991C97F87000C06E2A /* FMDatabaseAdditions.m */; };
+		784B11A31C97F87000C06E2A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B119B1C97F87000C06E2A /* FMDatabasePool.m */; };
+		784B11A41C97F87000C06E2A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B119D1C97F87000C06E2A /* FMDatabaseQueue.m */; };
+		784B11A51C97F87000C06E2A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11A01C97F87000C06E2A /* FMResultSet.m */; };
+		784B11B41C97F88E00C06E2A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11A81C97F88E00C06E2A /* AFHTTPSessionManager.m */; };
+		784B11B51C97F88E00C06E2A /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11AB1C97F88E00C06E2A /* AFNetworkReachabilityManager.m */; };
+		784B11B61C97F88E00C06E2A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11AD1C97F88E00C06E2A /* AFSecurityPolicy.m */; };
+		784B11B71C97F88E00C06E2A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11AF1C97F88E00C06E2A /* AFURLRequestSerialization.m */; };
+		784B11B81C97F88E00C06E2A /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11B11C97F88E00C06E2A /* AFURLResponseSerialization.m */; };
+		784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		784B11471C96C09900C06E2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 784B11291C96C09900C06E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 784B11301C96C09900C06E2A;
+			remoteInfo = MiniWeibo;
+		};
+		784B11521C96C09900C06E2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 784B11291C96C09900C06E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 784B11301C96C09900C06E2A;
+			remoteInfo = MiniWeibo;
+		};
+		784B117B1C96C0A800C06E2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 784B11291C96C09900C06E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 784B11781C96C0A800C06E2A;
+			remoteInfo = "MiniWeibo WatchKit 1 App";
+		};
+		784B11841C96C0A800C06E2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 784B11291C96C09900C06E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 784B11661C96C0A800C06E2A;
+			remoteInfo = "MiniWeibo WatchKit 1 Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		784B118D1C96C0A800C06E2A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				784B11861C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		784B11311C96C09900C06E2A /* MiniWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		784B11351C96C09900C06E2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		784B11371C96C09900C06E2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		784B11381C96C09900C06E2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		784B113A1C96C09900C06E2A /* MiniWeibo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiniWeibo-Prefix.pch"; sourceTree = "<group>"; };
+		784B113C1C96C09900C06E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		784B11411C96C09900C06E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784B11461C96C09900C06E2A /* MiniWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		784B114A1C96C09900C06E2A /* MiniWeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniWeiboTests.m; sourceTree = "<group>"; };
+		784B114C1C96C09900C06E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784B11511C96C09900C06E2A /* MiniWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		784B11551C96C09900C06E2A /* MiniWeiboUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiniWeiboUITests.m; sourceTree = "<group>"; };
+		784B11571C96C09900C06E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784B11671C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MiniWeibo WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784B116A1C96C0A800C06E2A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		784B116B1C96C0A800C06E2A /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		784B116C1C96C0A800C06E2A /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		784B116E1C96C0A800C06E2A /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		784B116F1C96C0A800C06E2A /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		784B11711C96C0A800C06E2A /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		784B11721C96C0A800C06E2A /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		784B11741C96C0A800C06E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		784B11761C96C0A800C06E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784B11791C96C0A800C06E2A /* MiniWeibo WatchKit 1 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniWeibo WatchKit 1 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784B117F1C96C0A800C06E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		784B11811C96C0A800C06E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		784B11831C96C0A800C06E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784B118E1C96CF9A00C06E2A /* MiniWeibo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MiniWeibo.entitlements; sourceTree = "<group>"; };
+		784B118F1C96CFE000C06E2A /* MiniWeibo WatchKit 1 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MiniWeibo WatchKit 1 Extension.entitlements"; sourceTree = "<group>"; };
+		784B11901C96D40200C06E2A /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		784B11911C96D40200C06E2A /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		784B11961C97F87000C06E2A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		784B11971C97F87000C06E2A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		784B11981C97F87000C06E2A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		784B11991C97F87000C06E2A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		784B119A1C97F87000C06E2A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		784B119B1C97F87000C06E2A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		784B119C1C97F87000C06E2A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		784B119D1C97F87000C06E2A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		784B119E1C97F87000C06E2A /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		784B119F1C97F87000C06E2A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		784B11A01C97F87000C06E2A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		784B11A71C97F88E00C06E2A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		784B11A81C97F88E00C06E2A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		784B11A91C97F88E00C06E2A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		784B11AA1C97F88E00C06E2A /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		784B11AB1C97F88E00C06E2A /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		784B11AC1C97F88E00C06E2A /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		784B11AD1C97F88E00C06E2A /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		784B11AE1C97F88E00C06E2A /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		784B11AF1C97F88E00C06E2A /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		784B11B01C97F88E00C06E2A /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		784B11B11C97F88E00C06E2A /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		784B11B21C97F88E00C06E2A /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		784B112E1C96C09900C06E2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11431C96C09900C06E2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B114E1C96C09900C06E2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11641C96C0A800C06E2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		784B11281C96C09900C06E2A = {
+			isa = PBXGroup;
+			children = (
+				784B11331C96C09900C06E2A /* MiniWeibo */,
+				784B11491C96C09900C06E2A /* MiniWeiboTests */,
+				784B11541C96C09900C06E2A /* MiniWeiboUITests */,
+				784B11681C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension */,
+				784B117D1C96C0A800C06E2A /* MiniWeibo WatchKit 1 App */,
+				784B11321C96C09900C06E2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		784B11321C96C09900C06E2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				784B11311C96C09900C06E2A /* MiniWeibo.app */,
+				784B11461C96C09900C06E2A /* MiniWeiboTests.xctest */,
+				784B11511C96C09900C06E2A /* MiniWeiboUITests.xctest */,
+				784B11671C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension.appex */,
+				784B11791C96C0A800C06E2A /* MiniWeibo WatchKit 1 App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		784B11331C96C09900C06E2A /* MiniWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				784B11941C97F87000C06E2A /* thirdparty */,
+				784B118E1C96CF9A00C06E2A /* MiniWeibo.entitlements */,
+				784B11371C96C09900C06E2A /* AppDelegate.h */,
+				784B11381C96C09900C06E2A /* AppDelegate.m */,
+				784B11901C96D40200C06E2A /* IndexViewController.h */,
+				784B11911C96D40200C06E2A /* IndexViewController.m */,
+				784B113A1C96C09900C06E2A /* MiniWeibo-Prefix.pch */,
+				784B113C1C96C09900C06E2A /* Assets.xcassets */,
+				784B11411C96C09900C06E2A /* Info.plist */,
+				784B11341C96C09900C06E2A /* Supporting Files */,
+			);
+			path = MiniWeibo;
+			sourceTree = "<group>";
+		};
+		784B11341C96C09900C06E2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				784B11351C96C09900C06E2A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		784B11491C96C09900C06E2A /* MiniWeiboTests */ = {
+			isa = PBXGroup;
+			children = (
+				784B114A1C96C09900C06E2A /* MiniWeiboTests.m */,
+				784B114C1C96C09900C06E2A /* Info.plist */,
+			);
+			path = MiniWeiboTests;
+			sourceTree = "<group>";
+		};
+		784B11541C96C09900C06E2A /* MiniWeiboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				784B11551C96C09900C06E2A /* MiniWeiboUITests.m */,
+				784B11571C96C09900C06E2A /* Info.plist */,
+			);
+			path = MiniWeiboUITests;
+			sourceTree = "<group>";
+		};
+		784B11681C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				784B118F1C96CFE000C06E2A /* MiniWeibo WatchKit 1 Extension.entitlements */,
+				784B116B1C96C0A800C06E2A /* InterfaceController.h */,
+				784B116C1C96C0A800C06E2A /* InterfaceController.m */,
+				784B116E1C96C0A800C06E2A /* NotificationController.h */,
+				784B116F1C96C0A800C06E2A /* NotificationController.m */,
+				784B11711C96C0A800C06E2A /* GlanceController.h */,
+				784B11721C96C0A800C06E2A /* GlanceController.m */,
+				784B11741C96C0A800C06E2A /* Assets.xcassets */,
+				784B11761C96C0A800C06E2A /* Info.plist */,
+				784B11691C96C0A800C06E2A /* Supporting Files */,
+			);
+			path = "MiniWeibo WatchKit 1 Extension";
+			sourceTree = "<group>";
+		};
+		784B11691C96C0A800C06E2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				784B116A1C96C0A800C06E2A /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		784B117D1C96C0A800C06E2A /* MiniWeibo WatchKit 1 App */ = {
+			isa = PBXGroup;
+			children = (
+				784B117E1C96C0A800C06E2A /* Interface.storyboard */,
+				784B11811C96C0A800C06E2A /* Assets.xcassets */,
+				784B11831C96C0A800C06E2A /* Info.plist */,
+			);
+			path = "MiniWeibo WatchKit 1 App";
+			sourceTree = "<group>";
+		};
+		784B11941C97F87000C06E2A /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				784B11A61C97F88E00C06E2A /* AFNetworking */,
+				784B11951C97F87000C06E2A /* fmdb */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		784B11951C97F87000C06E2A /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				784B11961C97F87000C06E2A /* FMDatabase.h */,
+				784B11971C97F87000C06E2A /* FMDatabase.m */,
+				784B11981C97F87000C06E2A /* FMDatabaseAdditions.h */,
+				784B11991C97F87000C06E2A /* FMDatabaseAdditions.m */,
+				784B119A1C97F87000C06E2A /* FMDatabasePool.h */,
+				784B119B1C97F87000C06E2A /* FMDatabasePool.m */,
+				784B119C1C97F87000C06E2A /* FMDatabaseQueue.h */,
+				784B119D1C97F87000C06E2A /* FMDatabaseQueue.m */,
+				784B119E1C97F87000C06E2A /* FMDB.h */,
+				784B119F1C97F87000C06E2A /* FMResultSet.h */,
+				784B11A01C97F87000C06E2A /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		784B11A61C97F88E00C06E2A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				784B11A71C97F88E00C06E2A /* AFHTTPSessionManager.h */,
+				784B11A81C97F88E00C06E2A /* AFHTTPSessionManager.m */,
+				784B11A91C97F88E00C06E2A /* AFNetworking.h */,
+				784B11AA1C97F88E00C06E2A /* AFNetworkReachabilityManager.h */,
+				784B11AB1C97F88E00C06E2A /* AFNetworkReachabilityManager.m */,
+				784B11AC1C97F88E00C06E2A /* AFSecurityPolicy.h */,
+				784B11AD1C97F88E00C06E2A /* AFSecurityPolicy.m */,
+				784B11AE1C97F88E00C06E2A /* AFURLRequestSerialization.h */,
+				784B11AF1C97F88E00C06E2A /* AFURLRequestSerialization.m */,
+				784B11B01C97F88E00C06E2A /* AFURLResponseSerialization.h */,
+				784B11B11C97F88E00C06E2A /* AFURLResponseSerialization.m */,
+				784B11B21C97F88E00C06E2A /* AFURLSessionManager.h */,
+				784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		784B11301C96C09900C06E2A /* MiniWeibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784B115A1C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo" */;
+			buildPhases = (
+				784B112D1C96C09900C06E2A /* Sources */,
+				784B112E1C96C09900C06E2A /* Frameworks */,
+				784B112F1C96C09900C06E2A /* Resources */,
+				784B118D1C96C0A800C06E2A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				784B11851C96C0A800C06E2A /* PBXTargetDependency */,
+			);
+			name = MiniWeibo;
+			productName = MiniWeibo;
+			productReference = 784B11311C96C09900C06E2A /* MiniWeibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		784B11451C96C09900C06E2A /* MiniWeiboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784B115D1C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeiboTests" */;
+			buildPhases = (
+				784B11421C96C09900C06E2A /* Sources */,
+				784B11431C96C09900C06E2A /* Frameworks */,
+				784B11441C96C09900C06E2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				784B11481C96C09900C06E2A /* PBXTargetDependency */,
+			);
+			name = MiniWeiboTests;
+			productName = MiniWeiboTests;
+			productReference = 784B11461C96C09900C06E2A /* MiniWeiboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		784B11501C96C09900C06E2A /* MiniWeiboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784B11601C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeiboUITests" */;
+			buildPhases = (
+				784B114D1C96C09900C06E2A /* Sources */,
+				784B114E1C96C09900C06E2A /* Frameworks */,
+				784B114F1C96C09900C06E2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				784B11531C96C09900C06E2A /* PBXTargetDependency */,
+			);
+			name = MiniWeiboUITests;
+			productName = MiniWeiboUITests;
+			productReference = 784B11511C96C09900C06E2A /* MiniWeiboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		784B11661C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784B118A1C96C0A800C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo WatchKit 1 Extension" */;
+			buildPhases = (
+				784B11631C96C0A800C06E2A /* Sources */,
+				784B11641C96C0A800C06E2A /* Frameworks */,
+				784B11651C96C0A800C06E2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				784B117C1C96C0A800C06E2A /* PBXTargetDependency */,
+			);
+			name = "MiniWeibo WatchKit 1 Extension";
+			productName = "MiniWeibo WatchKit 1 Extension";
+			productReference = 784B11671C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		784B11781C96C0A800C06E2A /* MiniWeibo WatchKit 1 App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784B11871C96C0A800C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo WatchKit 1 App" */;
+			buildPhases = (
+				784B11771C96C0A800C06E2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MiniWeibo WatchKit 1 App";
+			productName = "MiniWeibo WatchKit 1 App";
+			productReference = 784B11791C96C0A800C06E2A /* MiniWeibo WatchKit 1 App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		784B11291C96C09900C06E2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = pandora;
+				TargetAttributes = {
+					784B11301C96C09900C06E2A = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RYRPKMVKDL;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					784B11451C96C09900C06E2A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 784B11301C96C09900C06E2A;
+					};
+					784B11501C96C09900C06E2A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 784B11301C96C09900C06E2A;
+					};
+					784B11661C96C0A800C06E2A = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RYRPKMVKDL;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					784B11781C96C0A800C06E2A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 784B112C1C96C09900C06E2A /* Build configuration list for PBXProject "MiniWeibo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 784B11281C96C09900C06E2A;
+			productRefGroup = 784B11321C96C09900C06E2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				784B11301C96C09900C06E2A /* MiniWeibo */,
+				784B11451C96C09900C06E2A /* MiniWeiboTests */,
+				784B11501C96C09900C06E2A /* MiniWeiboUITests */,
+				784B11661C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension */,
+				784B11781C96C0A800C06E2A /* MiniWeibo WatchKit 1 App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		784B112F1C96C09900C06E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B113D1C96C09900C06E2A /* Assets.xcassets in Resources */,
+				784B113B1C96C09900C06E2A /* MiniWeibo-Prefix.pch in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11441C96C09900C06E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B114F1C96C09900C06E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11651C96C0A800C06E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B11751C96C0A800C06E2A /* Assets.xcassets in Resources */,
+				784B117A1C96C0A800C06E2A /* MiniWeibo WatchKit 1 App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11771C96C0A800C06E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B11821C96C0A800C06E2A /* Assets.xcassets in Resources */,
+				784B11801C96C0A800C06E2A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		784B112D1C96C09900C06E2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B11391C96C09900C06E2A /* AppDelegate.m in Sources */,
+				784B11A31C97F87000C06E2A /* FMDatabasePool.m in Sources */,
+				784B11B51C97F88E00C06E2A /* AFNetworkReachabilityManager.m in Sources */,
+				784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */,
+				784B11B71C97F88E00C06E2A /* AFURLRequestSerialization.m in Sources */,
+				784B11361C96C09900C06E2A /* main.m in Sources */,
+				784B11B81C97F88E00C06E2A /* AFURLResponseSerialization.m in Sources */,
+				784B11B41C97F88E00C06E2A /* AFHTTPSessionManager.m in Sources */,
+				784B11A41C97F87000C06E2A /* FMDatabaseQueue.m in Sources */,
+				784B11921C96D40200C06E2A /* IndexViewController.m in Sources */,
+				784B11A11C97F87000C06E2A /* FMDatabase.m in Sources */,
+				784B11A51C97F87000C06E2A /* FMResultSet.m in Sources */,
+				784B11B61C97F88E00C06E2A /* AFSecurityPolicy.m in Sources */,
+				784B11A21C97F87000C06E2A /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11421C96C09900C06E2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B114B1C96C09900C06E2A /* MiniWeiboTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B114D1C96C09900C06E2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B11561C96C09900C06E2A /* MiniWeiboUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784B11631C96C0A800C06E2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784B11701C96C0A800C06E2A /* NotificationController.m in Sources */,
+				784B116D1C96C0A800C06E2A /* InterfaceController.m in Sources */,
+				784B11731C96C0A800C06E2A /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		784B11481C96C09900C06E2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 784B11301C96C09900C06E2A /* MiniWeibo */;
+			targetProxy = 784B11471C96C09900C06E2A /* PBXContainerItemProxy */;
+		};
+		784B11531C96C09900C06E2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 784B11301C96C09900C06E2A /* MiniWeibo */;
+			targetProxy = 784B11521C96C09900C06E2A /* PBXContainerItemProxy */;
+		};
+		784B117C1C96C0A800C06E2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 784B11781C96C0A800C06E2A /* MiniWeibo WatchKit 1 App */;
+			targetProxy = 784B117B1C96C0A800C06E2A /* PBXContainerItemProxy */;
+		};
+		784B11851C96C0A800C06E2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 784B11661C96C0A800C06E2A /* MiniWeibo WatchKit 1 Extension */;
+			targetProxy = 784B11841C96C0A800C06E2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		784B117E1C96C0A800C06E2A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				784B117F1C96C0A800C06E2A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		784B11581C96C09900C06E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		784B11591C96C09900C06E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		784B115B1C96C09900C06E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = MiniWeibo/MiniWeibo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MiniWeibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		784B115C1C96C09900C06E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = MiniWeibo/MiniWeibo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MiniWeibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		784B115E1C96C09900C06E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MiniWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniWeibo.app/MiniWeibo";
+			};
+			name = Debug;
+		};
+		784B115F1C96C09900C06E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MiniWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniWeibo.app/MiniWeibo";
+			};
+			name = Release;
+		};
+		784B11611C96C09900C06E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MiniWeiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiniWeibo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		784B11621C96C09900C06E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MiniWeiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MiniWeibo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		784B11881C96C0A800C06E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = MiniWeibo_WatchKit_1_Extension;
+				INFOPLIST_FILE = "MiniWeibo WatchKit 1 App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		784B11891C96C0A800C06E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = MiniWeibo_WatchKit_1_Extension;
+				INFOPLIST_FILE = "MiniWeibo WatchKit 1 App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		784B118B1C96C0A800C06E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MiniWeibo WatchKit 1 Extension/MiniWeibo WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "MiniWeibo WatchKit 1 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		784B118C1C96C0A800C06E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MiniWeibo WatchKit 1 Extension/MiniWeibo WatchKit 1 Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "MiniWeibo WatchKit 1 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		784B112C1C96C09900C06E2A /* Build configuration list for PBXProject "MiniWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784B11581C96C09900C06E2A /* Debug */,
+				784B11591C96C09900C06E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		784B115A1C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784B115B1C96C09900C06E2A /* Debug */,
+				784B115C1C96C09900C06E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		784B115D1C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeiboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784B115E1C96C09900C06E2A /* Debug */,
+				784B115F1C96C09900C06E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		784B11601C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeiboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784B11611C96C09900C06E2A /* Debug */,
+				784B11621C96C09900C06E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		784B11871C96C0A800C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo WatchKit 1 App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784B11881C96C0A800C06E2A /* Debug */,
+				784B11891C96C0A800C06E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		784B118A1C96C0A800C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo WatchKit 1 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784B118B1C96C0A800C06E2A /* Debug */,
+				784B118C1C96C0A800C06E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 784B11291C96C09900C06E2A /* Project object */;
+}
