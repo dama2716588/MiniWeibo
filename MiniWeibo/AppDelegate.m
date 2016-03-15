@@ -17,12 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    _index = [[IndexViewController alloc] init];
-    _nav = [[UINavigationController alloc] initWithRootViewController:_index];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    _index = [[IndexViewController alloc] init];
+    _nav = [[UINavigationController alloc] initWithRootViewController:_index];
     self.window.rootViewController = _nav;
-    [self.window makeKeyAndVisible];    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

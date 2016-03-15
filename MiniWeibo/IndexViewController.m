@@ -7,6 +7,7 @@
 //
 
 #import "IndexViewController.h"
+#import "AuthViewController.h"
 
 @interface IndexViewController ()
 
@@ -16,22 +17,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"Index";
+    
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [loginButton setTitle:@"Login Weibo" forState:UIControlStateNormal];
+    [loginButton addTarget:self action:@selector(loginWeibo:) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    loginButton.frame = CGRectMake(0, 0, 100, 40);
+    loginButton.center = self.view.center;
+    [self.view addSubview:loginButton];
+}
+
+- (void)loginWeibo:(id)sender
+{
+    AuthViewController *authVC = [[AuthViewController alloc] init];
+    [self.navigationController pushViewController:authVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

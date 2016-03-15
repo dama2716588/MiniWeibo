@@ -33,6 +33,11 @@
 		784B11B71C97F88E00C06E2A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11AF1C97F88E00C06E2A /* AFURLRequestSerialization.m */; };
 		784B11B81C97F88E00C06E2A /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11B11C97F88E00C06E2A /* AFURLResponseSerialization.m */; };
 		784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */; };
+		784B11BC1C97FAD400C06E2A /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11BB1C97FAD400C06E2A /* AuthViewController.m */; };
+		784B11BE1C97FBCD00C06E2A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */; };
+		784B11C21C98253800C06E2A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11C11C98253800C06E2A /* BaseModel.m */; };
+		784B11C51C98263600C06E2A /* WBAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11C41C98263600C06E2A /* WBAuthInfo.m */; };
+		784B11C81C982C9A00C06E2A /* WBAuthInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11C71C982C9A00C06E2A /* WBAuthInfoTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +141,15 @@
 		784B11B11C97F88E00C06E2A /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		784B11B21C97F88E00C06E2A /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		784B11BA1C97FAD400C06E2A /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		784B11BB1C97FAD400C06E2A /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		784B11C01C98253800C06E2A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		784B11C11C98253800C06E2A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		784B11C31C98263600C06E2A /* WBAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfo.h; sourceTree = "<group>"; };
+		784B11C41C98263600C06E2A /* WBAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthInfo.m; sourceTree = "<group>"; };
+		784B11C61C982C9A00C06E2A /* WBAuthInfoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfoTool.h; sourceTree = "<group>"; };
+		784B11C71C982C9A00C06E2A /* WBAuthInfoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthInfoTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784B11BE1C97FBCD00C06E2A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +188,7 @@
 		784B11281C96C09900C06E2A = {
 			isa = PBXGroup;
 			children = (
+				784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */,
 				784B11331C96C09900C06E2A /* MiniWeibo */,
 				784B11491C96C09900C06E2A /* MiniWeiboTests */,
 				784B11541C96C09900C06E2A /* MiniWeiboUITests */,
@@ -201,8 +217,16 @@
 				784B118E1C96CF9A00C06E2A /* MiniWeibo.entitlements */,
 				784B11371C96C09900C06E2A /* AppDelegate.h */,
 				784B11381C96C09900C06E2A /* AppDelegate.m */,
+				784B11C01C98253800C06E2A /* BaseModel.h */,
+				784B11C11C98253800C06E2A /* BaseModel.m */,
+				784B11C31C98263600C06E2A /* WBAuthInfo.h */,
+				784B11C41C98263600C06E2A /* WBAuthInfo.m */,
+				784B11C61C982C9A00C06E2A /* WBAuthInfoTool.h */,
+				784B11C71C982C9A00C06E2A /* WBAuthInfoTool.m */,
 				784B11901C96D40200C06E2A /* IndexViewController.h */,
 				784B11911C96D40200C06E2A /* IndexViewController.m */,
+				784B11BA1C97FAD400C06E2A /* AuthViewController.h */,
+				784B11BB1C97FAD400C06E2A /* AuthViewController.m */,
 				784B113A1C96C09900C06E2A /* MiniWeibo-Prefix.pch */,
 				784B113C1C96C09900C06E2A /* Assets.xcassets */,
 				784B11411C96C09900C06E2A /* Info.plist */,
@@ -522,8 +546,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				784B11391C96C09900C06E2A /* AppDelegate.m in Sources */,
+				784B11BC1C97FAD400C06E2A /* AuthViewController.m in Sources */,
+				784B11C21C98253800C06E2A /* BaseModel.m in Sources */,
 				784B11A31C97F87000C06E2A /* FMDatabasePool.m in Sources */,
+				784B11C81C982C9A00C06E2A /* WBAuthInfoTool.m in Sources */,
 				784B11B51C97F88E00C06E2A /* AFNetworkReachabilityManager.m in Sources */,
+				784B11C51C98263600C06E2A /* WBAuthInfo.m in Sources */,
 				784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */,
 				784B11B71C97F88E00C06E2A /* AFURLRequestSerialization.m in Sources */,
 				784B11361C96C09900C06E2A /* main.m in Sources */,
@@ -689,6 +717,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniWeibo/MiniWeibo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "MiniWeibo/MiniWeibo-Prefix.pch";
 				INFOPLIST_FILE = MiniWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo;
@@ -705,6 +734,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniWeibo/MiniWeibo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "MiniWeibo/MiniWeibo-Prefix.pch";
 				INFOPLIST_FILE = MiniWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo;
