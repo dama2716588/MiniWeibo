@@ -8,6 +8,8 @@
 
 #import "AuthViewController.h"
 #import "AFNetworking.h"
+#import "WBAuthInfo.h"
+#import "WBAuthInfoTool.h"
 
 #define WB_Auth_URL @"https://api.weibo.com/oauth2/authorize"
 #define WBAppKey @"2503413329" //新浪提供的AppKey
@@ -61,8 +63,12 @@
     NSString*urlString = @"https://api.weibo.com/oauth2/access_token";
     
     [manager POST:urlString parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"login success");
+        
+        WBAuthInfo *info = [[WBAuthInfo alloc] initWithDictionary:responseObject];
+        if ([WBAuthInfoTool saveInfoWith:info]) {
+            NSLog(@"save success");
             [self.navigationController popViewControllerAnimated:YES];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //
     }];

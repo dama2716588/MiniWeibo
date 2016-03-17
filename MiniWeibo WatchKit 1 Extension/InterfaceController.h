@@ -11,4 +11,8 @@
 
 @interface InterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *loadBtn;
+
+- (IBAction)loadBtnTouch;
+
 @end

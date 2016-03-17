@@ -15,19 +15,16 @@
 
 +(BOOL)saveInfoWith:(WBAuthInfo *)authInfo
 {
-    authInfo.expires_time = [[NSDate date]dateByAddingTimeInterval:[authInfo.expires_in doubleValue]];
-    return [NSKeyedArchiver archiveRootObject:authInfo toFile:WBInfoPath];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:MiniWeiboGroupID];
+    [shared setObject:[authInfo dic] forKey:@"wb_auth_info"];
+    return [shared synchronize];
 }
 
 +(WBAuthInfo *)authInfo
 {
-    WBAuthInfo *authInfo =  [NSKeyedUnarchiver unarchiveObjectWithFile:WBInfoPath];
-    if (authInfo == nil) {
-        return nil;
-    }
-    if ([[NSDate date] compare:authInfo.expires_time] == NSOrderedDescending) {
-        return nil;
-    }
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:MiniWeiboGroupID];
+    NSDictionary *dic = [shared objectForKey:@"wb_auth_info"];
+    WBAuthInfo *authInfo = [[WBAuthInfo alloc] initWithDictionary:dic];
     return authInfo;
 }
 

@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "WBParametersRequestInfo.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic,assign) UIBackgroundTaskIdentifier backgroundTask;
 
 @end
 
@@ -47,6 +50,34 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
+{
+    NSLog(@"handleWatchKitExtensionRequest : %@",userInfo);
+    [self beginBackgroundTask];
+    [self requestDataWith:userInfo reply:reply];
+    //结束后台任务
+    [self endBackgroundTask];
+}
+
+-(void)requestDataWith:(NSDictionary*)userInfo reply:(void (^)(NSDictionary *))reply
+{
+    WBParametersRequestInfo *parameters = [[WBParametersRequestInfo alloc] initWithDictionary:userInfo];
+    //TODO: get weibo data
+}
+
+-(void)beginBackgroundTask
+{
+    self.backgroundTask = [[UIApplication sharedApplication]beginBackgroundTaskWithName:@"backgroundTask" expirationHandler:^{
+        [self endBackgroundTask];
+    }];
+}
+
+-(void)endBackgroundTask
+{
+    [[UIApplication sharedApplication]endBackgroundTask:self.backgroundTask];
+    self.backgroundTask = UIBackgroundTaskInvalid;
 }
 
 @end

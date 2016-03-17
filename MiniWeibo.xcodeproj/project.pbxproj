@@ -35,9 +35,26 @@
 		784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */; };
 		784B11BC1C97FAD400C06E2A /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11BB1C97FAD400C06E2A /* AuthViewController.m */; };
 		784B11BE1C97FBCD00C06E2A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */; };
-		784B11C21C98253800C06E2A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11C11C98253800C06E2A /* BaseModel.m */; };
-		784B11C51C98263600C06E2A /* WBAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11C41C98263600C06E2A /* WBAuthInfo.m */; };
-		784B11C81C982C9A00C06E2A /* WBAuthInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11C71C982C9A00C06E2A /* WBAuthInfoTool.m */; };
+		78FD89171C9A5E2E004D2995 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B119D1C97F87000C06E2A /* FMDatabaseQueue.m */; };
+		78FD89181C9A5E3F004D2995 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11971C97F87000C06E2A /* FMDatabase.m */; };
+		78FD89191C9A5E82004D2995 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */; };
+		78FD891A1C9A5EA3004D2995 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11991C97F87000C06E2A /* FMDatabaseAdditions.m */; };
+		78FD891B1C9A5EA3004D2995 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B119B1C97F87000C06E2A /* FMDatabasePool.m */; };
+		78FD891C1C9A5EA3004D2995 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11A01C97F87000C06E2A /* FMResultSet.m */; };
+		78FD89951C9AB194004D2995 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89881C9AB194004D2995 /* BaseModel.m */; };
+		78FD89961C9AB194004D2995 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89881C9AB194004D2995 /* BaseModel.m */; };
+		78FD89971C9AB194004D2995 /* WBAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD898A1C9AB194004D2995 /* WBAuthInfo.m */; };
+		78FD89981C9AB194004D2995 /* WBAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD898A1C9AB194004D2995 /* WBAuthInfo.m */; };
+		78FD89991C9AB194004D2995 /* WBAuthInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD898C1C9AB194004D2995 /* WBAuthInfoTool.m */; };
+		78FD899A1C9AB194004D2995 /* WBAuthInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD898C1C9AB194004D2995 /* WBAuthInfoTool.m */; };
+		78FD899B1C9AB194004D2995 /* WBCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD898E1C9AB194004D2995 /* WBCellModel.m */; };
+		78FD899C1C9AB194004D2995 /* WBCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD898E1C9AB194004D2995 /* WBCellModel.m */; };
+		78FD899D1C9AB194004D2995 /* WBDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89901C9AB194004D2995 /* WBDataManager.m */; };
+		78FD899E1C9AB194004D2995 /* WBDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89901C9AB194004D2995 /* WBDataManager.m */; };
+		78FD899F1C9AB194004D2995 /* WBParametersRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89921C9AB194004D2995 /* WBParametersRequestInfo.m */; };
+		78FD89A01C9AB194004D2995 /* WBParametersRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89921C9AB194004D2995 /* WBParametersRequestInfo.m */; };
+		78FD89A11C9AB194004D2995 /* WBUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89941C9AB194004D2995 /* WBUserModel.m */; };
+		78FD89A21C9AB194004D2995 /* WBUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FD89941C9AB194004D2995 /* WBUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,12 +161,20 @@
 		784B11BA1C97FAD400C06E2A /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		784B11BB1C97FAD400C06E2A /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
 		784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		784B11C01C98253800C06E2A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
-		784B11C11C98253800C06E2A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
-		784B11C31C98263600C06E2A /* WBAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfo.h; sourceTree = "<group>"; };
-		784B11C41C98263600C06E2A /* WBAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthInfo.m; sourceTree = "<group>"; };
-		784B11C61C982C9A00C06E2A /* WBAuthInfoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfoTool.h; sourceTree = "<group>"; };
-		784B11C71C982C9A00C06E2A /* WBAuthInfoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthInfoTool.m; sourceTree = "<group>"; };
+		78FD89871C9AB194004D2995 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		78FD89881C9AB194004D2995 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		78FD89891C9AB194004D2995 /* WBAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfo.h; sourceTree = "<group>"; };
+		78FD898A1C9AB194004D2995 /* WBAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthInfo.m; sourceTree = "<group>"; };
+		78FD898B1C9AB194004D2995 /* WBAuthInfoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfoTool.h; sourceTree = "<group>"; };
+		78FD898C1C9AB194004D2995 /* WBAuthInfoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAuthInfoTool.m; sourceTree = "<group>"; };
+		78FD898D1C9AB194004D2995 /* WBCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCellModel.h; sourceTree = "<group>"; };
+		78FD898E1C9AB194004D2995 /* WBCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCellModel.m; sourceTree = "<group>"; };
+		78FD898F1C9AB194004D2995 /* WBDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDataManager.h; sourceTree = "<group>"; };
+		78FD89901C9AB194004D2995 /* WBDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDataManager.m; sourceTree = "<group>"; };
+		78FD89911C9AB194004D2995 /* WBParametersRequestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBParametersRequestInfo.h; sourceTree = "<group>"; };
+		78FD89921C9AB194004D2995 /* WBParametersRequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBParametersRequestInfo.m; sourceTree = "<group>"; };
+		78FD89931C9AB194004D2995 /* WBUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBUserModel.h; sourceTree = "<group>"; };
+		78FD89941C9AB194004D2995 /* WBUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBUserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78FD89191C9A5E82004D2995 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,16 +239,11 @@
 		784B11331C96C09900C06E2A /* MiniWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				78FD89861C9AB16F004D2995 /* weibo */,
 				784B11941C97F87000C06E2A /* thirdparty */,
 				784B118E1C96CF9A00C06E2A /* MiniWeibo.entitlements */,
 				784B11371C96C09900C06E2A /* AppDelegate.h */,
 				784B11381C96C09900C06E2A /* AppDelegate.m */,
-				784B11C01C98253800C06E2A /* BaseModel.h */,
-				784B11C11C98253800C06E2A /* BaseModel.m */,
-				784B11C31C98263600C06E2A /* WBAuthInfo.h */,
-				784B11C41C98263600C06E2A /* WBAuthInfo.m */,
-				784B11C61C982C9A00C06E2A /* WBAuthInfoTool.h */,
-				784B11C71C982C9A00C06E2A /* WBAuthInfoTool.m */,
 				784B11901C96D40200C06E2A /* IndexViewController.h */,
 				784B11911C96D40200C06E2A /* IndexViewController.m */,
 				784B11BA1C97FAD400C06E2A /* AuthViewController.h */,
@@ -341,6 +362,27 @@
 				784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		78FD89861C9AB16F004D2995 /* weibo */ = {
+			isa = PBXGroup;
+			children = (
+				78FD89871C9AB194004D2995 /* BaseModel.h */,
+				78FD89881C9AB194004D2995 /* BaseModel.m */,
+				78FD89891C9AB194004D2995 /* WBAuthInfo.h */,
+				78FD898A1C9AB194004D2995 /* WBAuthInfo.m */,
+				78FD898B1C9AB194004D2995 /* WBAuthInfoTool.h */,
+				78FD898C1C9AB194004D2995 /* WBAuthInfoTool.m */,
+				78FD898D1C9AB194004D2995 /* WBCellModel.h */,
+				78FD898E1C9AB194004D2995 /* WBCellModel.m */,
+				78FD898F1C9AB194004D2995 /* WBDataManager.h */,
+				78FD89901C9AB194004D2995 /* WBDataManager.m */,
+				78FD89911C9AB194004D2995 /* WBParametersRequestInfo.h */,
+				78FD89921C9AB194004D2995 /* WBParametersRequestInfo.m */,
+				78FD89931C9AB194004D2995 /* WBUserModel.h */,
+				78FD89941C9AB194004D2995 /* WBUserModel.m */,
+			);
+			path = weibo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,16 +588,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				784B11391C96C09900C06E2A /* AppDelegate.m in Sources */,
+				78FD89A11C9AB194004D2995 /* WBUserModel.m in Sources */,
 				784B11BC1C97FAD400C06E2A /* AuthViewController.m in Sources */,
-				784B11C21C98253800C06E2A /* BaseModel.m in Sources */,
+				78FD89951C9AB194004D2995 /* BaseModel.m in Sources */,
+				78FD899B1C9AB194004D2995 /* WBCellModel.m in Sources */,
+				78FD899F1C9AB194004D2995 /* WBParametersRequestInfo.m in Sources */,
 				784B11A31C97F87000C06E2A /* FMDatabasePool.m in Sources */,
-				784B11C81C982C9A00C06E2A /* WBAuthInfoTool.m in Sources */,
+				78FD89991C9AB194004D2995 /* WBAuthInfoTool.m in Sources */,
 				784B11B51C97F88E00C06E2A /* AFNetworkReachabilityManager.m in Sources */,
-				784B11C51C98263600C06E2A /* WBAuthInfo.m in Sources */,
+				78FD89971C9AB194004D2995 /* WBAuthInfo.m in Sources */,
 				784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */,
 				784B11B71C97F88E00C06E2A /* AFURLRequestSerialization.m in Sources */,
 				784B11361C96C09900C06E2A /* main.m in Sources */,
 				784B11B81C97F88E00C06E2A /* AFURLResponseSerialization.m in Sources */,
+				78FD899D1C9AB194004D2995 /* WBDataManager.m in Sources */,
 				784B11B41C97F88E00C06E2A /* AFHTTPSessionManager.m in Sources */,
 				784B11A41C97F87000C06E2A /* FMDatabaseQueue.m in Sources */,
 				784B11921C96D40200C06E2A /* IndexViewController.m in Sources */,
@@ -586,9 +632,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78FD89961C9AB194004D2995 /* BaseModel.m in Sources */,
+				78FD891A1C9A5EA3004D2995 /* FMDatabaseAdditions.m in Sources */,
+				78FD899E1C9AB194004D2995 /* WBDataManager.m in Sources */,
+				78FD891B1C9A5EA3004D2995 /* FMDatabasePool.m in Sources */,
+				78FD89A01C9AB194004D2995 /* WBParametersRequestInfo.m in Sources */,
+				78FD891C1C9A5EA3004D2995 /* FMResultSet.m in Sources */,
 				784B11701C96C0A800C06E2A /* NotificationController.m in Sources */,
 				784B116D1C96C0A800C06E2A /* InterfaceController.m in Sources */,
+				78FD89981C9AB194004D2995 /* WBAuthInfo.m in Sources */,
+				78FD89171C9A5E2E004D2995 /* FMDatabaseQueue.m in Sources */,
 				784B11731C96C0A800C06E2A /* GlanceController.m in Sources */,
+				78FD899A1C9AB194004D2995 /* WBAuthInfoTool.m in Sources */,
+				78FD899C1C9AB194004D2995 /* WBCellModel.m in Sources */,
+				78FD89181C9A5E3F004D2995 /* FMDatabase.m in Sources */,
+				78FD89A21C9AB194004D2995 /* WBUserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +885,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MiniWeibo WatchKit 1 Extension/MiniWeibo WatchKit 1 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "MiniWeibo/MiniWeibo-Prefix.pch";
 				INFOPLIST_FILE = "MiniWeibo WatchKit 1 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo.watchkitextension;
@@ -842,6 +901,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MiniWeibo WatchKit 1 Extension/MiniWeibo WatchKit 1 Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "MiniWeibo/MiniWeibo-Prefix.pch";
 				INFOPLIST_FILE = "MiniWeibo WatchKit 1 Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.MiniWeibo.watchkitextension;
@@ -870,6 +930,7 @@
 				784B115C1C96C09900C06E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		784B115D1C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -878,6 +939,7 @@
 				784B115F1C96C09900C06E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		784B11601C96C09900C06E2A /* Build configuration list for PBXNativeTarget "MiniWeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -886,6 +948,7 @@
 				784B11621C96C09900C06E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		784B11871C96C0A800C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo WatchKit 1 App" */ = {
 			isa = XCConfigurationList;
@@ -894,6 +957,7 @@
 				784B11891C96C0A800C06E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		784B118A1C96C0A800C06E2A /* Build configuration list for PBXNativeTarget "MiniWeibo WatchKit 1 Extension" */ = {
 			isa = XCConfigurationList;
@@ -902,6 +966,7 @@
 				784B118C1C96C0A800C06E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
