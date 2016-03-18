@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "WBHttpTool.h"
 #import "WBParametersRequestInfo.h"
+#import "WBCellModel.h"
+#import "WBDataManager.h"
 
 @interface AppDelegate ()
 
@@ -64,7 +67,18 @@
 -(void)requestDataWith:(NSDictionary*)userInfo reply:(void (^)(NSDictionary *))reply
 {
     WBParametersRequestInfo *parameters = [[WBParametersRequestInfo alloc] initWithDictionary:userInfo];
-    //TODO: get weibo data
+    [WBHttpTool weiboWithParameters:parameters statusToolSuccess:^(id responseObject) {
+        NSArray *weiboArray = [responseObject objectForKey:@"statuses"];
+        if (weiboArray.count>0) {
+            for (NSDictionary *dic in weiboArray) {
+                WBCellModel *model = [[WBCellModel alloc] initWithDictionary:dic];
+                [[WBDataManager sharedInstance] saveWeiboWith:model];
+            }
+            reply(@{@"code":@"0000"});
+        }
+    } failure:^(NSError *error) {
+        reply(@{@"code":@"9999"});
+    }];
 }
 
 -(void)beginBackgroundTask

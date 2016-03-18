@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="PNP-fM-1qp">
+                        <button width="1" alignment="left" title="Load Weibo" id="PNP-fM-1qp">
                             <connections>
                                 <action selector="loadBtnTouch" destination="AgC-eL-Hgc" id="WpP-OB-szY"/>
                             </connections>
@@ -22,6 +22,44 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--未登录-->
+        <scene sceneID="ZsG-5c-jdJ">
+            <objects>
+                <controller identifier="notLogin" title="未登录" id="9bf-Qp-612" customClass="LoginInterfaceController">
+                    <items>
+                        <label width="136" height="30.5" alignment="left" text="Not Login" textAlignment="center" id="8oJ-lv-rEZ"/>
+                        <button width="1" height="32.5" alignment="left" title="Return" id="9jo-6V-0xg">
+                            <connections>
+                                <action selector="returnBtnTouch" destination="9bf-Qp-612" id="4hn-yR-Fpi"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="returnBtn" destination="9jo-6V-0xg" id="QV3-BB-81t"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="437" y="341"/>
+        </scene>
+        <!--微博-->
+        <scene sceneID="Xxb-jd-459">
+            <objects>
+                <controller identifier="timeline" title="微博" id="BAP-DU-Cas" customClass="TimelineInterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="更新" id="s5o-Ww-8uI"/>
+                        <table alignment="left" id="Ake-JJ-afK">
+                            <items>
+                                <tableRow id="HMU-IV-N37">
+                                    <group key="rootItem" width="1" alignment="left" id="Q5s-XF-dwO"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="更多" id="7fn-aH-j5K"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="627" y="341"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

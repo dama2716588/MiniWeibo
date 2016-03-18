@@ -15,7 +15,7 @@
 + (WBDataManager *)sharedInstance;
 + (void)purgeSharedInstance;
 
-- (BOOL)saveWeiboWith:(WBCellModel *)weibo;
-- (NSArray *)weiboWithParameters:(WBParametersRequestInfo *)parameters;
+- (void)saveWeiboWith:(WBCellModel *)weibo;
+-(NSArray *)getAllWeibo;;
 
 @end

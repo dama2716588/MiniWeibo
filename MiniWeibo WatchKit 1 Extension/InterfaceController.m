@@ -43,21 +43,20 @@
     NSDictionary *requestInfo = @{@"since_id":@"",@"max_id":@"",@"access_token":@""};
     WBParametersRequestInfo *parameters = [[WBParametersRequestInfo alloc] initWithDictionary:requestInfo];
     
-    
     if (parameters.access_token.length == 0) {
         [self pushControllerWithName:@"notLogin" context:nil];
+        NSLog(@"not login, return");
         return;
     }
     
-    NSArray*models = [[WBDataManager sharedInstance] weiboWithParameters:parameters];
+    NSArray *models = [[WBDataManager sharedInstance] getAllWeibo];
     
     if (models.count == 0) {
         NSDictionary*userInfo = [parameters dic];
         [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
             NSLog(@"%@",replyInfo);
             if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
-
-                NSArray*newModels = [[WBDataManager sharedInstance] weiboWithParameters:parameters];
+                NSArray*newModels = [[WBDataManager sharedInstance] getAllWeibo];
                 [self pushControllerWithName:@"weibo" context:newModels];
             }
         }];
