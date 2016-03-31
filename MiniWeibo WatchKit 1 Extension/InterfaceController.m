@@ -57,11 +57,11 @@
             NSLog(@"%@",replyInfo);
             if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
                 NSArray*newModels = [[WBDataManager sharedInstance] getAllWeibo];
-                [self pushControllerWithName:@"weibo" context:newModels];
+                [self pushControllerWithName:@"timeline" context:newModels];
             }
         }];
     } else {
-        [self pushControllerWithName:@"weibo" context:models];
+        [self pushControllerWithName:@"timeline" context:models];
     }
 }
 

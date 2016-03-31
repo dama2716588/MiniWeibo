@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -47,19 +47,75 @@
             <objects>
                 <controller identifier="timeline" title="微博" id="BAP-DU-Cas" customClass="TimelineInterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="更新" id="s5o-Ww-8uI"/>
+                        <button width="1" alignment="left" title="更新" id="s5o-Ww-8uI">
+                            <connections>
+                                <action selector="getNew" destination="BAP-DU-Cas" id="paf-ja-25Y"/>
+                            </connections>
+                        </button>
                         <table alignment="left" id="Ake-JJ-afK">
                             <items>
-                                <tableRow id="HMU-IV-N37">
-                                    <group key="rootItem" width="1" alignment="left" id="Q5s-XF-dwO"/>
+                                <tableRow identifier="TimelineTableRow" id="HMU-IV-N37" customClass="TimelineTableRow">
+                                    <group key="rootItem" width="1" alignment="left" id="Q5s-XF-dwO">
+                                        <items>
+                                            <group width="30" height="30" alignment="left" verticalAlignment="center" id="tJE-5I-IHU">
+                                                <items>
+                                                    <imageView width="30" height="30" alignment="left" verticalAlignment="center" contentMode="scaleAspectFill" id="dEM-UQ-rx1"/>
+                                                </items>
+                                            </group>
+                                            <separator alignment="left" alpha="0.0" id="QXj-9V-h9Q"/>
+                                            <label width="55.5" height="40" alignment="left" text="Label" minimumScaleFactor="0.69999999999999996" id="Tnr-FI-qNj"/>
+                                            <separator alignment="left" alpha="0.0" id="HIg-ov-9nD"/>
+                                            <group width="30" height="30" alignment="right" verticalAlignment="center" id="yhW-JH-eSe">
+                                                <items>
+                                                    <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="e8H-MM-dLy"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="firstTextGroup" destination="yhW-JH-eSe" id="oLt-hq-thq"/>
+                                        <outlet property="firstTextLabel" destination="e8H-MM-dLy" id="MlR-to-wdC"/>
+                                        <outlet property="iconGroup" destination="tJE-5I-IHU" id="V3h-XB-vV4"/>
+                                        <outlet property="userGroup" destination="Q5s-XF-dwO" id="GrQ-ex-81P"/>
+                                        <outlet property="userIcon" destination="dEM-UQ-rx1" id="7UX-aU-K95"/>
+                                        <outlet property="userName" destination="Tnr-FI-qNj" id="gfq-AZ-gQx"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="更多" id="7fn-aH-j5K"/>
+                        <button width="1" alignment="left" title="更多" id="7fn-aH-j5K">
+                            <connections>
+                                <action selector="getMore" destination="BAP-DU-Cas" id="u5D-Kj-k2v"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="getMoreBtn" destination="7fn-aH-j5K" id="C9y-tS-eOW"/>
+                        <outlet property="getNewBtn" destination="s5o-Ww-8uI" id="sKE-qB-pXf"/>
+                        <outlet property="table" destination="Ake-JJ-afK" id="2xZ-5P-8PE"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="627" y="341"/>
+        </scene>
+        <!--详情-->
+        <scene sceneID="ipF-8L-GAc">
+            <objects>
+                <controller identifier="weiboDetail" title="详情" id="RfY-fE-o7E" customClass="DetailInterfaceController">
+                    <items>
+                        <group width="1" height="1" alignment="left" id="Nzv-cL-tQq">
+                            <items>
+                                <label width="1" widthAdjustment="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="Pju-Us-Sey"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="textGroup" destination="Nzv-cL-tQq" id="1lm-Ew-Fev"/>
+                        <outlet property="textLabel" destination="Pju-Us-Sey" id="lPS-DZ-95V"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="829" y="341"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

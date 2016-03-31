@@ -35,6 +35,8 @@
 		784B11B91C97F88E00C06E2A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11B31C97F88E00C06E2A /* AFURLSessionManager.m */; };
 		784B11BC1C97FAD400C06E2A /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11BB1C97FAD400C06E2A /* AuthViewController.m */; };
 		784B11BE1C97FBCD00C06E2A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */; };
+		789B5F401CACF73700314D59 /* TimelineTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 789B5F3F1CACF73700314D59 /* TimelineTableRow.m */; };
+		789B5F431CAD152700314D59 /* DetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789B5F421CAD152700314D59 /* DetailInterfaceController.m */; };
 		78FD89171C9A5E2E004D2995 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B119D1C97F87000C06E2A /* FMDatabaseQueue.m */; };
 		78FD89181C9A5E3F004D2995 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B11971C97F87000C06E2A /* FMDatabase.m */; };
 		78FD89191C9A5E82004D2995 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */; };
@@ -186,6 +188,10 @@
 		784B11BA1C97FAD400C06E2A /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		784B11BB1C97FAD400C06E2A /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
 		784B11BD1C97FBCD00C06E2A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		789B5F3E1CACF73700314D59 /* TimelineTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableRow.h; sourceTree = "<group>"; };
+		789B5F3F1CACF73700314D59 /* TimelineTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableRow.m; sourceTree = "<group>"; };
+		789B5F411CAD152700314D59 /* DetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInterfaceController.h; sourceTree = "<group>"; };
+		789B5F421CAD152700314D59 /* DetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInterfaceController.m; sourceTree = "<group>"; };
 		78FD89871C9AB194004D2995 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		78FD89881C9AB194004D2995 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		78FD89891C9AB194004D2995 /* WBAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAuthInfo.h; sourceTree = "<group>"; };
@@ -346,6 +352,10 @@
 				78FF38391C9BEC2200AC6560 /* LoginInterfaceController.m */,
 				78FF38421C9BFD0F00AC6560 /* TimelineInterfaceController.h */,
 				78FF38431C9BFD0F00AC6560 /* TimelineInterfaceController.m */,
+				789B5F3E1CACF73700314D59 /* TimelineTableRow.h */,
+				789B5F3F1CACF73700314D59 /* TimelineTableRow.m */,
+				789B5F411CAD152700314D59 /* DetailInterfaceController.h */,
+				789B5F421CAD152700314D59 /* DetailInterfaceController.m */,
 				784B116E1C96C0A800C06E2A /* NotificationController.h */,
 				784B116F1C96C0A800C06E2A /* NotificationController.m */,
 				784B11711C96C0A800C06E2A /* GlanceController.h */,
@@ -745,6 +755,7 @@
 			files = (
 				78FD89961C9AB194004D2995 /* BaseModel.m in Sources */,
 				78FF38331C9BD83A00AC6560 /* NSObject+MJKeyValue.m in Sources */,
+				789B5F401CACF73700314D59 /* TimelineTableRow.m in Sources */,
 				78FD891A1C9A5EA3004D2995 /* FMDatabaseAdditions.m in Sources */,
 				78FD899E1C9AB194004D2995 /* WBDataManager.m in Sources */,
 				78FD891B1C9A5EA3004D2995 /* FMDatabasePool.m in Sources */,
@@ -764,6 +775,7 @@
 				78FD899A1C9AB194004D2995 /* WBAuthInfoTool.m in Sources */,
 				78FF38291C9BD83A00AC6560 /* MJProperty.m in Sources */,
 				78FF383F1C9BF82200AC6560 /* JSONKit.m in Sources */,
+				789B5F431CAD152700314D59 /* DetailInterfaceController.m in Sources */,
 				78FD899C1C9AB194004D2995 /* WBCellModel.m in Sources */,
 				78FD89181C9A5E3F004D2995 /* FMDatabase.m in Sources */,
 				78FD89A21C9AB194004D2995 /* WBUserModel.m in Sources */,

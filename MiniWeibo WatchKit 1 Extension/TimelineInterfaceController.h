@@ -11,4 +11,11 @@
 
 @interface TimelineInterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceTable *table;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *getNewBtn;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *getMoreBtn;
+
+- (IBAction)getNew;
+- (IBAction)getMore;
+
 @end
