@@ -15,6 +15,11 @@
           statusToolSuccess:(void (^)(id responseObject))success
                     failure:(void(^)(NSError*error))failure
 {
+    if (parameters.access_token.length == 0) {
+        NSLog(@"access_token is nil");
+        return;
+    }
+    
     NSString*urlString = @"https://api.weibo.com/2/statuses/friends_timeline.json";
     __block NSDictionary*md;
     if (parameters.since_id.length>0) {

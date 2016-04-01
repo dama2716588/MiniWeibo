@@ -15,7 +15,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-// 渠道号
 #define MiniWeiboGroupID  @"group.com.baidu.miniweibo"
 
 #endif

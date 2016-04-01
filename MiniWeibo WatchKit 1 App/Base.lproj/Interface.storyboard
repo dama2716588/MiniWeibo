@@ -103,7 +103,7 @@
             <objects>
                 <controller identifier="weiboDetail" title="详情" id="RfY-fE-o7E" customClass="DetailInterfaceController">
                     <items>
-                        <group width="1" height="1" alignment="left" id="Nzv-cL-tQq">
+                        <group width="1" widthAdjustment="1" alignment="left" id="Nzv-cL-tQq">
                             <items>
                                 <label width="1" widthAdjustment="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="Pju-Us-Sey"/>
                             </items>

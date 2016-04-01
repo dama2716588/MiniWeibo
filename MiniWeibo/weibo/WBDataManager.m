@@ -58,21 +58,36 @@ PRIMARY KEY(ID)) \
     return self;
 }
 
-- (void)saveWeiboWith:(WBCellModel *)weibo
+- (void)saveWeiboWith:(NSDictionary *)weibo
 {
-    [self insertObject:[weibo dic] intoTable:@"friends_timeline"];
+    [self insertObject:[weibo mj_JSONString] intoTable:@"friends_timeline"];
 }
 
 -(NSArray *)getAllWeibo;
 {
-    return [self selectAllRecordsToModel:[WBCellModel class] fromTable:@"friends_timeline"];
+    return [self selectAllRecords:@"friends_timeline"];
+}
+
+-(NSArray *)selectAllRecords:(NSString *)tableName
+{
+    __block NSMutableArray *searchArray = [[NSMutableArray alloc]init];
+    [_queue inDatabase:^(FMDatabase *db) {
+        FMResultSet *resultSet = [db executeQuery:[NSString stringWithFormat:@"select *from %@ ",tableName]];
+        while ([resultSet next])
+        {
+            NSString   *JSONString= [resultSet stringForColumn:@"JSONString"];
+            NSDictionary *jsondict =[JSONString objectFromJSONString];
+            [searchArray addObject:jsondict];
+        }
+    }];
+    return searchArray;
 }
 
 -(NSArray *)selectAllRecordsToModel:(Class)className  fromTable:(NSString *)tableName
 {
     __block NSMutableArray *searchArray = [[NSMutableArray alloc]init];
     [_queue inDatabase:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:[NSString stringWithFormat:@"select *from %@  order by ID DESC",tableName]];
+        FMResultSet *resultSet = [db executeQuery:[NSString stringWithFormat:@"select *from %@  order by ID ASC",tableName]];
         while ([resultSet next])
         {
             NSString   *JSONString= [resultSet stringForColumn:@"JSONString"];
@@ -110,9 +125,15 @@ PRIMARY KEY(ID)) \
     }];
 }
 
-- (void)insertObject:(NSDictionary*)dict intoTable:(NSString *)tableName
+- (void)insertObject:(NSString*)jsonStr intoTable:(NSString *)tableName
 {
-    NSString *jsonStr=[dict mj_JSONString];
+    // TODO: need to fix
+    // crach: jk_encode_add_atom_to_buffer https://github.com/johnezang/JSONKit/pull/89
+    //NSString *jsonStr=[dict mj_JSONString];
+    
+//    NSError* error = nil;
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+//    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     [self createTableWithName:tableName];
     
@@ -128,6 +149,31 @@ PRIMARY KEY(ID)) \
             NSLog(@"rollback Table : %@",tableName);
             *rollback = YES;
             return ;
+        }
+    }];
+}
+
+- (void)clearWeiboCache
+{
+    [self eraseTable:@"friends_timeline"];
+}
+
+- (void)eraseTable:(NSString *)tableName
+{
+    // not exist
+    if ([self tableExists:tableName] == NO) {
+        return;
+    }
+    
+    NSString *sqlstr = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
+    [self executeUpdateWithSQL:sqlstr fromTable:tableName];
+}
+
+-(void)executeUpdateWithSQL:(NSString *)sql fromTable:(NSString *)tableName
+{
+     [_queue inDatabase:^(FMDatabase *db) {
+        if(![db executeUpdate:sql]){
+            NSLog(@"ERROR,Failed To executeUpdate Table %@",tableName);
         }
     }];
 }

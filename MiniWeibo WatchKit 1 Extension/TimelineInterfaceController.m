@@ -9,10 +9,15 @@
 #import "TimelineInterfaceController.h"
 #import "TimelineTableRow.h"
 #import "WBCellModel.h"
+#import "WBParametersRequestInfo.h"
+#import "WBDataManager.h"
+#import "WBAuthInfoTool.h"
+#import "MJExtension.h"
 
 @interface TimelineInterfaceController ()
 
 @property(nonatomic,strong) NSMutableArray *weiboArray;
+@property(nonatomic,strong) NSOperationQueue *q;
 
 @end
 
@@ -21,6 +26,7 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     self.weiboArray = context;
+    _q = [[NSOperationQueue alloc] init];
     [self reloadData];
     // Configure interface objects here.
 }
@@ -38,27 +44,33 @@
 - (void)reloadData
 {
     [self clearTableRows];
-    
+
     [self.table insertRowsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [self.weiboArray count])] withRowType:@"TimelineTableRow"];
     __block CGFloat cellAlpha = 1.0f;
-    [self.weiboArray enumerateObjectsUsingBlock:^(WBCellModel *cellModel, NSUInteger idx, BOOL *stop) {
+    __weak TimelineInterfaceController *weakSelf = self;
+    
+    [self.weiboArray enumerateObjectsUsingBlock:^(NSDictionary *cellDic, NSUInteger idx, BOOL *stop) {
+        
+        WBCellModel *cellModel = [WBCellModel mj_objectWithKeyValues:cellDic];
+        
         TimelineTableRow *row = (TimelineTableRow*)[self.table rowControllerAtIndex:idx];
         [row.userGroup setCornerRadius:0.0f];
         [row.userGroup setAlpha:cellAlpha];
         [row.iconGroup setCornerRadius:15.0f];
         
-        [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
-            NSData*imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:cellModel.user.profile_image_url]];
-            
-            [[WKInterfaceDevice currentDevice]addCachedImageWithData:imgData name:cellModel.user.screen_name];
-            
-            [[NSOperationQueue mainQueue]addOperationWithBlock:^{
-                [row.userIcon setImageNamed:cellModel.user.screen_name];
+        if (cellModel.user.profile_image_url.length>0 && cellModel.user.screen_name.length>0) {
+            [weakSelf.q addOperationWithBlock:^{
+                NSData*imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:cellModel.user.profile_image_url]];
+                BOOL ceched = [[WKInterfaceDevice currentDevice]addCachedImageWithData:imgData name:cellModel.user.screen_name];
+                if (ceched) {
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        [row.userIcon setImageNamed:cellModel.user.screen_name];
+                    }];
+                }
             }];
             
-        }];
-        
-        [row.userName setText:cellModel.user.screen_name];
+            [row.userName setText:cellModel.user.screen_name];
+        }
         
         [row.firstTextGroup setBackgroundColor:[UIColor darkGrayColor]];
         [row.firstTextGroup setCornerRadius:4.0f];
@@ -83,12 +95,61 @@
 
 - (IBAction)getNew
 {
+    NSString *accessToken = [WBAuthInfoTool authInfo].access_token;
+    NSDictionary *requestInfo = @{@"since_id":@"",@"max_id":@"",@"access_token":accessToken};
+    WBParametersRequestInfo *info = [[WBParametersRequestInfo alloc] initWithDictionary:requestInfo];
+    WBCellModel *firstWeibo = [WBCellModel mj_objectWithKeyValues:self.weiboArray.firstObject];
+    info.since_id = firstWeibo.idstr;
     
+    NSDictionary*userInfo = [info dic];
+    [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
+        NSLog(@"replyInfo : %@",replyInfo);
+        if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
+
+            NSArray *newModels = [replyInfo objectForKey:@"replyData"];
+            NSMutableArray *newWeibos = [NSMutableArray array];
+            
+            if (newModels.count == 0) {
+                NSLog(@"没有新微博");
+                return;
+            }
+            
+            for (NSDictionary *dic in newModels) {
+                WBCellModel *model = [WBCellModel mj_objectWithKeyValues:dic];
+                [newWeibos addObject:model];
+            }
+            
+            NSRange range = NSMakeRange(0, newWeibos.count);
+            NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:range];
+            [self.weiboArray insertObjects:newWeibos atIndexes:set];
+            [self reloadData];
+        }
+    }];    
 }
 
 - (IBAction)getMore
 {
+    NSString *accessToken = [WBAuthInfoTool authInfo].access_token;
+    NSDictionary *requestInfo = @{@"since_id":@"",@"max_id":@"",@"access_token":accessToken};
+    WBParametersRequestInfo *info = [[WBParametersRequestInfo alloc] initWithDictionary:requestInfo];
+    info.since_id = [[self.weiboArray lastObject]idstr];
     
+    NSDictionary*userInfo = [info dic];
+    [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
+        NSLog(@"replyInfo : %@",replyInfo);
+        if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
+            
+            NSArray*newModels = [[WBDataManager sharedInstance] getAllWeibo];
+            
+            if (newModels.count == 0) {
+                NSLog(@"没有更多微博");
+                return;
+            }
+            
+            [self.weiboArray addObjectsFromArray:newModels];
+            [self reloadData];
+        }
+    }];
 }
 
 @end

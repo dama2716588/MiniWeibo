@@ -67,14 +67,15 @@
 -(void)requestDataWith:(NSDictionary*)userInfo reply:(void (^)(NSDictionary *))reply
 {
     WBParametersRequestInfo *parameters = [[WBParametersRequestInfo alloc] initWithDictionary:userInfo];
+        
     [WBHttpTool weiboWithParameters:parameters statusToolSuccess:^(id responseObject) {
         NSArray *weiboArray = [responseObject objectForKey:@"statuses"];
         if (weiboArray.count>0) {
             for (NSDictionary *dic in weiboArray) {
-                WBCellModel *model = [[WBCellModel alloc] initWithDictionary:dic];
-                [[WBDataManager sharedInstance] saveWeiboWith:model];
+                //WBCellModel *model = [[WBCellModel alloc] initWithDictionary:dic];
+                [[WBDataManager sharedInstance] saveWeiboWith:dic];
             }
-            reply(@{@"code":@"0000"});
+            reply(@{@"code":@"0000",@"replyData":weiboArray});
         }
     } failure:^(NSError *error) {
         reply(@{@"code":@"9999"});

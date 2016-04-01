@@ -8,7 +8,7 @@
 
 #import "BaseModel.h"
 
-@interface WBUserModel : BaseModel
+@interface WBUserModel : NSObject
 
 @property(nonatomic,copy) NSString *screen_name;
 @property(nonatomic,copy) NSString *profile_image_url;
