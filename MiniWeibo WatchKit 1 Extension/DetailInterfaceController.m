@@ -8,6 +8,7 @@
 
 #import "DetailInterfaceController.h"
 #import "WBCellModel.h"
+#import "MJExtension.h"
 
 @interface DetailInterfaceController ()
 
@@ -19,7 +20,7 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    self.cellModel = context;
+    self.cellModel = [WBCellModel mj_objectWithKeyValues:context];
     [self setUpDetail];
 }
 

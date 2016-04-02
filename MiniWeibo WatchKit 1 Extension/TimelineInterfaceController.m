@@ -61,7 +61,7 @@
         if (cellModel.user.profile_image_url.length>0 && cellModel.user.screen_name.length>0) {
             [weakSelf.q addOperationWithBlock:^{
                 NSData*imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:cellModel.user.profile_image_url]];
-                BOOL ceched = [[WKInterfaceDevice currentDevice]addCachedImageWithData:imgData name:cellModel.user.screen_name];
+                BOOL ceched = [[WKInterfaceDevice currentDevice] addCachedImageWithData:imgData name:cellModel.user.screen_name];
                 if (ceched) {
                     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                         [row.userIcon setImageNamed:cellModel.user.screen_name];
@@ -103,7 +103,6 @@
     
     NSDictionary*userInfo = [info dic];
     [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
-        NSLog(@"replyInfo : %@",replyInfo);
         if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
 
             NSArray *newModels = [replyInfo objectForKey:@"replyData"];
@@ -132,21 +131,28 @@
     NSString *accessToken = [WBAuthInfoTool authInfo].access_token;
     NSDictionary *requestInfo = @{@"since_id":@"",@"max_id":@"",@"access_token":accessToken};
     WBParametersRequestInfo *info = [[WBParametersRequestInfo alloc] initWithDictionary:requestInfo];
-    info.since_id = [[self.weiboArray lastObject]idstr];
+    WBCellModel *lastWeibo = [WBCellModel mj_objectWithKeyValues:self.weiboArray.lastObject];
+    info.max_id = lastWeibo.idstr;
     
     NSDictionary*userInfo = [info dic];
     [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
-        NSLog(@"replyInfo : %@",replyInfo);
         if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
             
-            NSArray*newModels = [[WBDataManager sharedInstance] getAllWeibo];
+            NSArray *newModels = [replyInfo objectForKey:@"replyData"];
+            NSMutableArray *newWeibos = [NSMutableArray array];
             
             if (newModels.count == 0) {
                 NSLog(@"没有更多微博");
                 return;
             }
             
-            [self.weiboArray addObjectsFromArray:newModels];
+            for (NSDictionary *dic in newModels) {
+                WBCellModel *model = [WBCellModel mj_objectWithKeyValues:dic];
+                [newWeibos addObject:model];
+            }
+            
+            [self.weiboArray addObjectsFromArray:newWeibos
+             ];
             [self reloadData];
         }
     }];

@@ -54,33 +54,11 @@
 
     NSDictionary*userInfo = [parameters dic];
     [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
-        NSLog(@"replyInfo %@",replyInfo);
         if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
             NSArray*newModels = [[WBDataManager sharedInstance] getAllWeibo];
-            NSMutableArray *newWeibos = [NSMutableArray array];
-            for (NSDictionary *dic in newModels) {
-                WBCellModel *model = [WBCellModel mj_objectWithKeyValues:dic];
-                [newWeibos addObject:model];
-            }
-            
             [self pushControllerWithName:@"timeline" context:newModels];
         }
-    }];    
-    
-//    NSArray *models = [[WBDataManager sharedInstance] getAllWeibo];
-//    
-//    if (models.count == 0) {
-//        NSDictionary*userInfo = [parameters dic];
-//        [WKInterfaceController openParentApplication:userInfo reply:^(NSDictionary *replyInfo, NSError *error) {
-//            NSLog(@"%@",replyInfo);
-//            if ([[replyInfo objectForKey:@"code"]isEqualToString:@"0000"]) {
-//                NSArray*newModels = [[WBDataManager sharedInstance] getAllWeibo];
-//                [self pushControllerWithName:@"timeline" context:newModels];
-//            }
-//        }];
-//    } else {
-//        [self pushControllerWithName:@"timeline" context:models];
-//    }
+    }];
 }
 
 @end

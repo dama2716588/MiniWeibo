@@ -23,6 +23,7 @@
     NSString*urlString = @"https://api.weibo.com/2/statuses/friends_timeline.json";
     __block NSDictionary*md;
     if (parameters.since_id.length>0) {
+        NSLog(@"since_id_ : %@",parameters.since_id);
         md = @{@"access_token":parameters.access_token,@"since_id":parameters.since_id,@"count":@"10"};
     } else if (parameters.max_id.length>0){
         md = @{@"access_token":parameters.access_token,@"max_id":parameters.max_id,@"count":@"10"};
