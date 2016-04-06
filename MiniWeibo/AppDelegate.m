@@ -30,7 +30,32 @@
     self.window.rootViewController = _nav;
     [self.window makeKeyAndVisible];
     
+    [self push_didFinishLaunchingWithOptions:launchOptions];    
+    
     return YES;
+}
+
+- (void)push_didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    UIUserNotificationType myTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:myTypes categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"DeviceToken 获取失败，原因：%@",error);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"deviceToken:%@",deviceToken);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

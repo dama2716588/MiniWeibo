@@ -11,4 +11,6 @@
 
 @interface NotificationController : WKUserNotificationInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *dyAlertLabel;
+
 @end

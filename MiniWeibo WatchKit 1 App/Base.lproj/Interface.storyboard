@@ -122,10 +122,21 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="Mini Weibo" id="Ksg-WP-t5g"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" text="Nice to meet you !" id="TUO-84-5gH"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Ksg-WP-t5g" id="I3B-rH-Yn7"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>
@@ -135,23 +146,32 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="XkS-y5-khE"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
+                        <color key="sashColor" red="0.47463013990000003" green="0.4761179626" blue="0.70456518310000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
-                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                        <segue destination="ZXi-FF-eKk" kind="relationship" relationship="dynamicNotificationInterface" id="rbh-fW-lfr"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="235" y="1001"/>
         </scene>
         <!--Notification Controller-->
-        <scene sceneID="KIl-fV-djm">
+        <scene sceneID="1Q7-ka-fHL">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+                <controller id="ZXi-FF-eKk" customClass="NotificationController">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="HyA-ET-DeT"/>
+                    </items>
+                    <connections>
+                        <outlet property="dyAlertLabel" destination="HyA-ET-DeT" id="ghU-AI-F15"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="535" y="1001"/>
         </scene>
     </scenes>
 </document>

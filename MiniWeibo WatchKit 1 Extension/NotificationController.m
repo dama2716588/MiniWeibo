@@ -21,7 +21,7 @@
     if (self){
         // Initialize variables here.
         // Configure interface objects here.
-        
+        [self setUpUI];
     }
     return self;
 }
@@ -36,6 +36,11 @@
     [super didDeactivate];
 }
 
+- (void)setUpUI
+{
+    [self.dyAlertLabel setText:@"from dynamic interface controller message"];
+}
+
 /*
 - (void)didReceiveLocalNotification:(UILocalNotification *)localNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     // This method is called when a local notification needs to be presented.
@@ -47,7 +52,7 @@
 }
 */
 
-/*
+
 - (void)didReceiveRemoteNotification:(NSDictionary *)remoteNotification withCompletion:(void (^)(WKUserNotificationInterfaceType))completionHandler {
     // This method is called when a remote notification needs to be presented.
     // Implement it if you use a dynamic notification interface.
@@ -56,7 +61,7 @@
     // After populating your dynamic notification interface call the completion block.
     completionHandler(WKUserNotificationInterfaceTypeCustom);
 }
-*/
+
 
 @end
 
